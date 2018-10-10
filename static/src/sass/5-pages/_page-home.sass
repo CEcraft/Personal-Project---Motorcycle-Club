@@ -19,7 +19,7 @@
   z-index: -1
   min-height: 100vh
 
-
+//HERO CONTENT *******************************************************
 
 .hero
   background-image: url("../img/hero_bg.png")
@@ -33,14 +33,167 @@
   overflow: auto
 
 
+.hero-container
+  margin: -100px 0
+  text-align: center
 
 
 
-#homelogo
-  margin-top: 100px
-  margin-bottom: 50px
+.hero-logo
+  margin-bottom: 20px
   display: inline-block
 
 #joinbtn
   text-align: center
   display: inline-block
+
+.hero-content
+  margin-top: 155px
+  margin-left: 0%
+
+
+// ABOUT CONTENT*********************************************************
+
+.about
+  //float: right
+  // position: absolute
+  //margin: 0
+  //z-index: -1
+  //background-color: red
+  background-image: url("../img/horse_bg.png")
+  background-repeat: no-repeat
+  background-position: right
+  background-attachment: fixed
+  //margin-top: -100px
+  //position: relative
+
+.about-content h1
+  +bigHeader($dark_rust,white)
+
+
+.about-content p
+  padding-right: 200px
+
+.about-content
+  display: grid
+  grid-gap: 30px
+  grid-template-columns: 1fr 1fr
+
+
+.about-content:first-child
+  grid-column: 1/2
+  justify-items: end
+
+.about-content .text
+  margin-top: 135px
+  grid-column: 2/3
+  justify-self: end
+//.about-content h2,p,a
+  grid-column: 2/3
+  grid-row: 2/3
+  margin-bottom: 50px
+
+
+
+
+  // RIDES CONTENT**********************************************************
+
+.rides
+  background-image: url("../img/rides_bg.jpg")
+  background-repeat: no-repeat
+  background-size: cover
+
+
+.rides-content
+  display: flex
+  // display: grid
+  // grid-gap: 30px
+  //grid-template-columns: 1fr 1fr 1fr
+  // grid-template-areas: "div div div"
+
+.rides-content .card
+  margin: 0 30px
+
+.rides h1
+  +bigHeader($dark,white)
+  margin-bottom: 50px
+  text-align: center
+
+// .rides-content .card:nth-child(1)
+//   grid-row: 2/3
+//   grid-column: 1/2
+//   justify-self: center
+//
+// .rides-content .card:nth-child(2)
+//   grid-row: 2/3
+//   grid-column: 2/3
+//   justify-self: center
+//
+// .rides-content .card:nth-child(3)
+//   grid-row: 2/3
+//   grid-column: 3/4
+//   justify-self: center
+
+
+
+
+  // grid-template-areas: "div div""div"
+  // .rides-content
+  //   display: grid
+  //   grid-template-columns: 1fr 1fr
+  //   grid-template-rows: 1fr 1fr 1fr
+  //
+  // .rides-content .card:nth-child(1)
+  //   grid-row: 1/2
+  //   grid-column: 1/2
+  //   justify-self: center
+  //
+  // .rides-content .card:nth-child(2)
+  //   grid-row: 1/2
+  //   grid-column: 2/3
+  //   justify-self: center
+  //
+  // .rides-content .card:nth-child(3)
+  //   display: inline-block
+
+
+
+
+
+  // TEAM CONTENT**********************************************************
+.team
+  background-image: url("../img/wing_bg_2.png")
+  background-repeat: no-repeat
+  background-position: right
+  background-attachment: fixed
+
+
+
+.team-content h1
+  +bigHeader($dark_rust,white)
+  text-align: center
+  margin-bottom: 50px
+
+
+
+
+
+
+@media screen and (max-width:768px)
+
+  .about
+    background-position: 160% 10%
+
+  .about-content p
+    padding-right: 0
+    margin-right: 0
+
+  .rides-content
+    display: block
+    margin: auto
+    width: 60%
+
+  .rides-content .card
+    margin: 30px 0
+
+@media screen and (max-width:640px)

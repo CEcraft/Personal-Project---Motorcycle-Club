@@ -244,25 +244,22 @@ template, [hidden] {
 
 /**
  * Add the correct display in IE 10. */
-.container {
-  display: grid;
-  width: 1180px;
-  padding: 0 10px;
-  margin: 0 auto; }
-
 body {
-  background-color: #272727;
-  color: #d4c7a5;
-  perspective: 1px;
-  transform-style: preserve-3d;
-  overflow-y: scroll;
-  overflow-x: hidden; }
+  background-color: #1e1e1e;
+  color: #d4c7a5; }
 
 li {
   list-style: none; }
 
 section {
-  margin: 0px 0 100px 0; }
+  margin: auto 0;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  justify-self: center; }
+
+.container {
+  grid-column: 2/3;
+  margin: 100px 0; }
 
 button {
   border: none; }
@@ -271,12 +268,25 @@ button {
   margin-top: -16px; }
 
 p {
-  color: #68696b; }
+  color: #68696b;
+  line-height: 30px;
+  margin-bottom: 20px; }
+
+h1 {
+  text-transform: uppercase; }
+
+h1, h2, h3, h4 {
+  margin-bottom: 20px; }
 
 .btn {
   margin: 0;
   padding: 0;
   display: block; }
+
+@media screen and (max-width: 768px) {
+  section {
+    margin-left: -15%;
+    margin-right: -15%; } }
 
 button {
   height: 50px;
@@ -354,22 +364,253 @@ p {
   font-family: "Work Sans";
   font-size: 15px; }
 
-.nav {
+nav {
+  margin-top: 50px;
   display: flex; }
 
-.nav li:first-child {
-  margin-right: auto;
-  margin-left: -80px; }
+nav input {
+  display: none; }
 
-.nav a {
+.nav-wrapper ul {
+  float: right; }
+
+.nav-wrapper ul li {
+  display: inline-block; }
+
+.nav-wrapper ul li:not(:last-child) {
+  margin-right: 40px; }
+
+.logo {
+  float: left;
+  margin-right: auto; }
+
+.nav-wrapper ul li a {
   color: white;
   font-size: 20px;
   border-radius: 5px;
-  padding: 50px 40px;
   display: block; }
 
-.nav a:hover {
+.nav-wrapper a:hover {
   color: #c42f2a; }
+
+@media screen and (max-width: 768px) {
+  nav {
+    margin-top: 50px; }
+  .logo {
+    padding: 0; }
+  .nav-wrapper {
+    position: fixed;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+    background-color: #1e1e1e;
+    transition: all 0.3s ease-in-out; }
+  .nav-wrapper ul {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%; }
+  .nav-wrapper ul li {
+    display: block;
+    float: none;
+    width: 100%;
+    text-align: right;
+    margin-bottom: 10px; }
+  .nav-wrapper ul li:nth-child(1) a {
+    transition-delay: 0.3s; }
+  .nav-wrapper ul li:nth-child(2) a {
+    transition-delay: 0.4s; }
+  .nav-wrapper ul li:nth-child(3) a {
+    transition-delay: 0.5s; }
+  .nav-wrapper ul li:nth-child(4) a {
+    transition-delay: 0.6s; }
+  .nav-wrapper ul li:not(:first-child) {
+    margin-left: 0; }
+  .nav-wrapper ul li a {
+    margin-right: 120px;
+    padding: 10px 24px;
+    opacity: 0;
+    font-size: 30px;
+    color: white;
+    transform: translateX(-20px);
+    transition: all 0.3s ease-in-out; }
+  .nav-btn {
+    margin-top: 25px;
+    margin-right: 80px;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 9999;
+    border-radius: 50%; }
+  .nav-btn i {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    margin-left: 15px; }
+  .nav-btn i:nth-child(1) {
+    margin-top: 20px; }
+  .nav-btn i:nth-child(2) {
+    margin-top: 4px;
+    opacity: 1; }
+  .nav-btn i:nth-child(3) {
+    margin-top: 4px; }
+  #nav:checked + .nav-btn {
+    transform: rotate(45deg); }
+  #nav:checked + .nav-btn i {
+    background: #c42f2a;
+    transition: transform 0.3s ease; }
+  #nav:checked + .nav-btn i:nth-child(1) {
+    transform: translateY(6px) rotate(180deg); }
+  #nav:checked + .nav-btn i:nth-child(2) {
+    opacity: 0; }
+  #nav:checked + .nav-btn i:nth-child(3) {
+    transform: translateY(-6px) rotate(90deg); }
+  #nav:checked ~ .nav-wrapper {
+    z-index: 9990;
+    opacity: 1; }
+  #nav:checked ~ .nav-wrapper ul li a {
+    opacity: 1;
+    transform: translateX(0); }
+  .hidden {
+    display: none; } }
+
+.footer {
+  background-image: url("../img/footer_bg.jpg");
+  background-size: cover; }
+
+.footer .container {
+  margin: 50px 0 0 0; }
+
+.footer-content {
+  display: grid;
+  grid-template-areas: ".logo_foot .adress .contact .social"; }
+
+.footer #legal {
+  text-align: center; }
+
+.footer-content ul {
+  margin-top: 10px; }
+
+.footer-content h1 {
+  font-size: 25px;
+  font-weight: 400;
+  color: #c42f2a;
+  margin-bottom: 30px; }
+
+#legal {
+  color: white;
+  font-size: 12px; }
+
+.footer-content li {
+  margin: -25px 0px; }
+
+.footer-content .social img {
+  display: flex;
+  float: left;
+  margin: 0 5px; }
+
+.footer-content .adress p {
+  line-height: 25px; }
+
+.slider-container .slider {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px; }
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s; }
+
+@keyframes fade {
+  from {
+    opacity: 0.3; }
+  to {
+    opacity: 1; } }
+
+.slider-image {
+  animation-delay: 0.3s; }
+
+.slider-content {
+  animation-delay: 0.5s; }
+
+.slider-container .slider .slider-image {
+  justify-self: end; }
+
+.slider-container ul {
+  position: absolute;
+  margin-top: -4px; }
+
+.slider-container ul li {
+  display: block; }
+
+.slider-container ul li:nth-child(1) {
+  transform: rotate(180deg); }
+
+.slider-container ul li .arrow {
+  height: 50px;
+  width: 50px;
+  opacity: 0.5;
+  background-image: url("../img/arrow_n.png");
+  color: white;
+  display: inline-block;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-delay: 0.1s;
+  -moz-transition-delay: 0.1s;
+  -o-transition-delay: 0.1s;
+  transition-delay: 0.1s; }
+
+.slider-container ul li .arrow:hover {
+  height: 50px;
+  width: 50px;
+  opacity: 1;
+  background-image: url("../img/arrow_n.png");
+  color: white;
+  cursor: pointer; }
+
+.slider-container ul li .arrow:active {
+  height: 50px;
+  width: 50px;
+  opacity: 1;
+  background-image: url("../img/arrow_a.png");
+  color: white; }
+
+.slider-content p {
+  width: 410px; }
+
+.card {
+  height: 400px;
+  width: 290px;
+  background-color: #1e1e1e;
+  border: solid 4px white;
+  background-image: url("../img/moto_bg_rides.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 25px; }
+
+.card h4 {
+  color: #fff;
+  padding: 0;
+  margin-bottom: -15px; }
+
+.card h2, p {
+  padding: 0;
+  margin-bottom: 20px; }
 
 .hero {
   background-image: url("../img/hero_bg.png");
@@ -382,11 +623,93 @@ p {
   text-align: center;
   overflow: auto; }
 
-#homelogo {
-  margin-top: 100px;
-  margin-bottom: 50px;
+.hero-container {
+  margin: -100px 0;
+  text-align: center; }
+
+.hero-logo {
+  margin-bottom: 20px;
   display: inline-block; }
 
 #joinbtn {
   text-align: center;
   display: inline-block; }
+
+.hero-content {
+  margin-top: 155px;
+  margin-left: 0%; }
+
+.about {
+  background-image: url("../img/horse_bg.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-attachment: fixed; }
+
+.about-content h1 .part1 {
+  color: #a99158; }
+
+.about-content h1 .part2 {
+  color: white; }
+
+.about-content p {
+  padding-right: 200px; }
+
+.about-content {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 1fr 1fr; }
+
+.about-content:first-child {
+  grid-column: 1/2;
+  justify-items: end; }
+
+.about-content .text {
+  margin-top: 135px;
+  grid-column: 2/3;
+  justify-self: end; }
+
+.rides {
+  background-image: url("../img/rides_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.rides-content {
+  display: flex; }
+
+.rides-content .card {
+  margin: 0 30px; }
+
+.rides h1 {
+  margin-bottom: 50px;
+  text-align: center; }
+  .rides h1 .part1 {
+    color: #1e1e1e; }
+  .rides h1 .part2 {
+    color: white; }
+
+.team {
+  background-image: url("../img/wing_bg_2.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-attachment: fixed; }
+
+.team-content h1 {
+  text-align: center;
+  margin-bottom: 50px; }
+  .team-content h1 .part1 {
+    color: #a99158; }
+  .team-content h1 .part2 {
+    color: white; }
+
+@media screen and (max-width: 768px) {
+  .about {
+    background-position: 160% 10%; }
+  .about-content p {
+    padding-right: 0;
+    margin-right: 0; }
+  .rides-content {
+    display: block;
+    margin: auto;
+    width: 60%; }
+  .rides-content .card {
+    margin: 30px 0; } }

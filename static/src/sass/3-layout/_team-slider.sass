@@ -1,0 +1,78 @@
+// .slider-container
+//   width: 1245px
+
+
+.slider-container .slider
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-gap: 30px
+
+.fade
+  animation-name: fade
+  animation-duration: 1.5s
+
+@keyframes fade
+  from{opacity: 0.3}
+  to{opacity: 1}
+
+.slider-image
+  animation-delay: 0.3s
+
+.slider-content
+  animation-delay: 0.5s
+
+.slider-container .slider .slider-image
+  justify-self: end
+
+
+.slider-container ul
+  position: absolute
+  margin-top: -4px
+
+
+.slider-container ul li
+  display: block
+
+.slider-container ul li:nth-child(1)
+  transform: rotate(180deg)
+
+//
+// .slider-container ul li:nth-child(2)
+//   float: right
+
+.slider-container ul li .arrow
+  +buttonsControle(50px,50px,0.5,"../img/arrow_n.png",white)
+  display: inline-block
+  -webkit-transition-property: opacity
+  -moz-transition-property: opacity
+  -o-transition-property: opacity
+  transition-property: opacity
+
+  -webkit-transition-duration: 0.3s
+  -moz-transition-duration: 0.3s
+  -o-transition-duration: 0.3s
+  transition-duration: 0.3s
+
+  -webkit-transition-delay: 0.1s
+  -moz-transition-delay: 0.1s
+  -o-transition-delay: 0.1s
+  transition-delay: 0.1s
+
+
+
+.slider-container ul li .arrow:hover
+  +buttonsControle(50px,50px,1,"../img/arrow_n.png",white)
+  cursor: pointer
+
+.slider-container ul li .arrow:active
+  +buttonsControle(50px,50px,1,"../img/arrow_a.png",white)
+
+
+.slider-content p
+  width: 410px
+
+@media screen and (max-width:768px)
+
+
+
+@media screen and (max-width:640px)

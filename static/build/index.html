@@ -6,22 +6,35 @@
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
+
 <!-- HERO SECTION -->
-
-
 
     <section class="hero">
       <div class="container">
         <div class="hero-container">
-          <ul class="nav">
-           <li id=logo><a href="#"><img src="img/logo.png" alt=""></a></li>
-           <li><a href="#">Home</a></li>
-           <li><a href="#">Gallery</a></li>
-           <li><a href="#">About</a></li>
-           <li><a href="#">Rides</a></li>
-          </ul>
-        <img src="img/home_logo.png" alt="horsemen logo" id="homelogo">
-        <a href="#" class="btn"><button id="joinbtn" type="button" name="button">Join Us</button></a>
+          <nav>
+              <input type="checkbox" id="nav" class="hidden" name="" value="">
+              <label for="nav" class="nav-btn">
+                  <i></i>
+                  <i></i>
+                  <i></i>
+              </label>
+              <div class="logo">
+                <a href="#"><img src="img/logo.png" alt=""></a>
+              </div>
+              <div class="nav-wrapper">
+                <ul>
+                   <li><a href="#">Home</a></li>
+                   <li><a href="#">Gallery</a></li>
+                   <li><a href="#">About</a></li>
+                   <li><a href="#">Rides</a></li>
+                </ul>
+              </div>
+          </nav>
+          <div class="hero-content">
+            <img src="img/home_logo.png" alt="horsemen logo" class="hero-logo">
+            <a href="#" class="btn"><button id="joinbtn" type="button" name="button">Join Us</button></a>
+          </div>
         <!--<img src="img/hero_bg.png" alt="motorcycle" id="bg">-->
         </div>
       </div>
@@ -33,17 +46,26 @@
 
     <section class="about">
       <div class="container">
-        <h1>Horsemen <br>Philosophy</h1>
-        <img src="img/img_phy.png" alt="groupe photo">
-        <h2>Any place is good</h2>
-        <p>Morbi vestibulum, turpis ac consequat tristique,
-          nisi massa Pellentesque porttitor elit eu diam vehicula
-          porttitor. Nunc sit amet erat mollis orci tincidunt tincidunt
-          eu in velit. Vivamus scelerisque aliquet magna, et varius ex lobortis eu.
-          Pellentesque eu leo varius, feugiat leo vel
-          Viverra sem felis. Cras posuere massa </p>
+        <div class="about-content">
+
+            <div>
+              <h1><span class="part1"> Horsemen </span><br><span class="part2">Philosophy</span></h1>
+              <img src="img/img_phy.png" alt="groupe photo">
+            </div>
+
+            <div class="text">
+              <h2>Any place is good</h2>
+              <p>Morbi vestibulum, turpis ac consequat tristique,
+                nisi massa Pellentesque porttitor elit eu diam vehicula
+                porttitor. Nunc sit amet erat mollis orci tincidunt tincidunt
+                eu in velit. Vivamus scelerisque aliquet magna, et varius ex lobortis eu. <br>
+                Pellentesque eu leo varius, feugiat leo vel
+                Viverra sem felis. Cras posuere massa </p>
+                <a href="#" class="btn"><button id="joinbtn" type="button" name="button">More</button></a>
+            </div>
+          </div>
       </div>
-      <img src="img/horse_svg.svg" alt="">
+
     </section>
 
 <!-- END ABOUT SECTION -->
@@ -52,41 +74,48 @@
 
     <section class="rides">
       <div class="container">
-        <img src="img/rides_bg.jpg" alt="groupe photo">
-        <h1>Latest Rides</h1>
+        <!-- <img src="img/rides_bg.jpg" alt="groupe photo"> -->
+        <h1><span class="part1"> Latest </span><span class="part2">Rides</span></h1>
+        <div class="rides-content">
 
-        <div class="card">
-          <h4>date</h4>
-          <h2>Curabitur viverra enim id leo</h2>
-          <p>Morbi vestibulum, turpis ac consequat tristique, nisi massa Pellentesque
-           porttitor elit eu diam vehicula porttitor. Nunc sit amet erat mollis
-           orci tincidunt tincidunt eu in velit.
-           Vivamus scelerisque aliquet magna, et varius ex lobortis. </p>
-           <a href="rides.html">More</a>
+            <div class="card c1">
+
+              <h4>SEP 25</h4>
+              <h2>Curabitur viverra enim id leo</h2>
+              <p>Morbi vestibulum, turpis ac consequat tristique, nisi massa Pellentesque
+               porttitor elit eu diam vehicula porttitor. Nunc sit amet erat mollis
+               orci tincidunt tincidunt eu in velit.
+               Vivamus scelerisque aliquet magna, et varius ex lobortis. </p>
+               <a href="rides.html">More</a>
+
+            </div>
+
+            <div class="card c2">
+
+              <h4>AUG 5</h4>
+              <h2>Nam ut massa lobortis dui vitae </h2>
+              <p>Morbi vestibulum, turpis ac consequat tristique, nisi massa Pellentesque
+               porttitor elit eu diam vehicula porttitor. Nunc sit amet erat mollis
+               orci tincidunt tincidunt eu in velit.
+               Vivamus scelerisque aliquet magna, et varius ex lobortis. </p>
+               <a href="rides.html">More</a>
+
+            </div>
+
+            <div class="card c3">
+
+              <h4>SEP 1</h4>
+              <h2>Suspendisse faucibus dolor nisi </h2>
+              <p>Morbi vestibulum, turpis ac consequat tristique, nisi massa Pellentesque
+               porttitor elit eu diam vehicula porttitor. Nunc sit amet erat mollis
+               orci tincidunt tincidunt eu in velit.
+               Vivamus scelerisque aliquet magna, et varius ex lobortis. </p>
+               <a href="rides.html">More</a>
+
+            </div>
         </div>
-
-        <div class="card">
-          <h4>date</h4>
-          <h2>Nam ut massa lobortis dui vitae </h2>
-          <p>Morbi vestibulum, turpis ac consequat tristique, nisi massa Pellentesque
-           porttitor elit eu diam vehicula porttitor. Nunc sit amet erat mollis
-           orci tincidunt tincidunt eu in velit.
-           Vivamus scelerisque aliquet magna, et varius ex lobortis. </p>
-           <a href="rides.html">More</a>
-        </div>
-
-        <div class="card">
-          <h4>date</h4>
-          <h2>Suspendisse faucibus dolor nisi </h2>
-          <p>Morbi vestibulum, turpis ac consequat tristique, nisi massa Pellentesque
-           porttitor elit eu diam vehicula porttitor. Nunc sit amet erat mollis
-           orci tincidunt tincidunt eu in velit.
-           Vivamus scelerisque aliquet magna, et varius ex lobortis. </p>
-           <a href="rides.html">More</a>
-        </div>
-
       </div>
-      <img src="img/horse_svg.svg" alt="">
+
     </section>
 
 <!-- END RIDES SECTION -->
@@ -97,52 +126,108 @@
     <section class="team">
       <div class="container">
         <div class="team-content">
-            <img src="img/member1.jpg" alt="Mermber1">
-            <h1>The Club Team</h1>
-            <h2>The Godfather</h2>
-            <p>Morbi vestibulum, turpis ac consequat tristique, nisi massa
-              maximus lacus, eu dignissim diam quam et est. Pellentesque
-              porttitor elit eu diam vehicula porttitor. Nunc sit amet erat
-              mollis orci tincidunt tincidunt eu in velit. Vivamus scelerisque
-              aliquet magna, et varius ex lobortis eu.
-              Pellentesque eu leo varius, feugiat leo vel, efficitur est.
-              Ut viverra sem felis. Cras posuere massa sit amet augue posuere, a
-              tincidunt augue convallis. Aliquam scelerisque urna in arcu aliquam interdum. </p>
-          </div>
-      </div>
-      <img src="img/wing_svg.svg" alt="wing">
+           <h1><span class="part1"> The Club </span><span class="part2">Team</span></h1>
+                <div class="slider-container">
+                  <ul>
+                    <li><button class="arrow left" onclick="navIndex(-1)"></button></li>
+                    <li><button class="arrow right" onclick="navIndex(+1)"></button></li>
+                  </ul>
+                  <div class="slider">
+                        <div class="slider-image fade">
+                            <img src="img/member_1.jpg" alt="Mermber1">
+                        </div>
+                        <div class="slider-content fade">
+                          <h2>The Godfather 1</h2>
+                          <p>Morbi vestibulum, turpis ac consequat tristique, nisi massa
+                            maximus lacus, eu dignissim diam quam et est. Pellentesque
+                            porttitor elit eu diam vehicula porttitor. Nunc sit amet erat
+                            mollis orci tincidunt tincidunt eu in velit. Vivamus scelerisque
+                            aliquet magna, et varius ex lobortis eu.<br><br>
+                            Pellentesque eu leo varius, feugiat leo vel, efficitur est.
+                            Ut viverra sem felis. Cras posuere massa sit amet augue posuere, a
+                            tincidunt augue convallis. Aliquam scelerisque urna in arcu aliquam interdum. </p>
+                        </div>
 
-      <img src="img/arrow_n.png" alt="right arrow">
-      <img src="img/arrow_n.png" alt="left arrow">
+                  </div>
+
+
+                  <div class="slider">
+                        <div class="slider-image fade">
+                            <img src="img/member_1.jpg" alt="Mermber1">
+                        </div>
+                        <div class="slider-content fade">
+                          <h2>The Godfather 2</h2>
+                          <p>Morbi vestibulum, turpis ac consequat tristique, nisi massa
+                            maximus lacus, eu dignissim diam quam et est. Pellentesque
+                            porttitor elit eu diam vehicula porttitor. Nunc sit amet erat
+                            mollis orci tincidunt tincidunt eu in velit. Vivamus scelerisque
+                            aliquet magna, et varius ex lobortis eu.<br><br>
+                            Pellentesque eu leo varius, feugiat leo vel, efficitur est.
+                            Ut viverra sem felis. Cras posuere massa sit amet augue posuere, a
+                            tincidunt augue convallis. Aliquam scelerisque urna in arcu aliquam interdum. </p>
+                        </div>
+
+                </div>
+
+                <div class="slider">
+                      <div class="slider-image fade">
+                          <img src="img/member_1.jpg" alt="Mermber1">
+                      </div>
+                      <div class="slider-content fade">
+                        <h2>The Godfather 3</h2>
+                        <p>Morbi vestibulum, turpis ac consequat tristique, nisi massa
+                          maximus lacus, eu dignissim diam quam et est. Pellentesque
+                          porttitor elit eu diam vehicula porttitor. Nunc sit amet erat
+                          mollis orci tincidunt tincidunt eu in velit. Vivamus scelerisque
+                          aliquet magna, et varius ex lobortis eu.<br><br>
+                          Pellentesque eu leo varius, feugiat leo vel, efficitur est.
+                          Ut viverra sem felis. Cras posuere massa sit amet augue posuere, a
+                          tincidunt augue convallis. Aliquam scelerisque urna in arcu aliquam interdum. </p>
+                      </div>
+
+              </div>
+
+
+            </div>
+          </div>
+
+      </div>
+
+
+
     </section>
 
 <!-- END TEAM SECTION -->
 
 <!-- FOOTER-->
-<footer>
-  <div class="container">
-  <img src="img/logo.png" alt="logo">
-  <ul class="adress">
-    <li><h1>Adress</h1></li>
-    <li><p>Lorem ipsum dolor sit amet, consectetur
-      8879 street</p></li>
-  </ul>
-  <ul class="contact">
-    <li><h1>Contact</h1></li>
-    <li><p>Horsemen@horsmeninfo.com</p></li>
-      <li><p>555-666-5555</p></li>
-  </ul>
-  <ul class="social">
-    <li><h1>Social</h1></li>
-    <li> <a href="#">  <img src="img/twitter.png" alt="twitter"></a> </li>
-    <li> <a href="#"><img src="img/facebook.png" alt="facebook"></a> </li>
-    <li> <a href="#"><img src="img/instagram.png" alt="instagram"></a> </li>
-  </ul>
-</div>
-<img src="img/footer_bg.jpg" alt="">
-<p id="legal" >Horsemen All rights reserved 2018 - Made by CEcraft</p>
-</footer>
-<!-- END FOOTER -->
+<section class="footer">
+      <div class="container">
+        <div class="footer-content">
+            <img src="img/logo.png" alt="logo" class="logo_foot">
+            <ul class="adress">
+              <li><h1>Adress</h1></li>
+              <li><p>Lorem ipsum dolor sit<br> amet, consectetur<br>
+                8879 street</p></li>
+            </ul>
+            <ul class="contact">
+              <li><h1>Contact</h1></li>
+              <li><p>Horsemen@horsmeninfo.com</p></li>
+                <li><p>555-666-5555</p></li>
+            </ul>
+            <ul class="social">
+              <li><h1>Social</h1></li>
+              <li> <a href="#">  <img src="img/twitter.png" alt="twitter"></a> </li>
+              <li> <a href="#"><img src="img/facebook.png" alt="facebook"></a> </li>
+              <li> <a href="#"><img src="img/instagram.png" alt="instagram"></a> </li>
+            </ul>
+          </div>
+          <p id="legal" >Horsemen All rights reserved 2018 - Made by CEcraft</p>
+      </div>
+    <!--<img src="img/footer_bg.jpg" alt="">-->
 
+</section>
+<!-- END FOOTER -->
+<script type="text/javascript" src="../js/app.js"></script>
+<script type="text/javascript" src="../js/vendors.js"></script>
   </body>
 </html>
